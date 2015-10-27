@@ -1,0 +1,33 @@
+.header{
+	color: #ee6e73;
+}
+
+.preloader-wrapper{	
+	margin: 50px auto;
+}
+
+.rotate{
+	-webkit-transform: rotate(180deg); 
+	-moz-transform: rotate(-180deg);	
+}
+
+.btn-collection{
+	margin-top : -7px;
+	margin-left:5px;
+}
+
+.collection-item{
+	clear:both;
+}
+
+.input-field.col.s12 label{
+	width: 100%;
+}
+
+label:after{
+	top:35px!important;
+}
+
+label.active:after{
+	top:61px!important;
+}

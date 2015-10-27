@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+		<title>Backbonejs</title>
+		<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
+	<body class="container">
+		
+		<header>
+			<h2 class="header">Collections</h2>
+		</header>
+				
+		<main class="main_content"></main>
+
+		<footer></footer>
+
+
+
+
+
+
+
+		<!-- templates -->
+		<script type="html/template" id="tpl_home">
+			<div id="main-collection" class="collection">
+				<div class="valign-wrapper">
+					<div class="preloader-wrapper big active">
+					    <div class="spinner-layer spinner-blue-only">
+					        <div class="circle-clipper left">
+					            <div class="circle"></div>
+					        </div>
+					        <div class="gap-patch">
+					            <div class="circle"></div>
+					        </div>
+					        <div class="circle-clipper right">
+					            <div class="circle"></div>
+					        </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<a id="add" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">add</i></a>
+		</script>
+
+		<script type="html/template" id="tpl_home_item">
+			<div class="collection-item">
+				<%=name%> <%=surname%> <%=age%>
+				<a class="secondary-content waves-effect waves-light btn btn-collection hrefRemove">
+					<i class="material-icons">delete</i>
+				</a>
+				<a href="#/edit/<%= id %>" class="secondary-content waves-effect waves-light btn btn-collection hrefEdit">
+					<i class="material-icons">edit</i>
+				</a>
+			</div>
+		</script>
+		<script type="html/template" id="tpl_home_empty">
+			<a class="collection-item">No existen Consultores.</a>
+		</script>
+
+		<script type="html/template" id="tpl_add">
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="name" type="text" class="validate" value="<%= name %>">
+					<label for="name" class="<%if(name){%>active<%}%>">Nombre</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="surname" type="text" class="validate" value="<%= surname %>">
+					<label for="surname" class="<%if(surname){%>active<%}%>">Apellido</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="age" type="text" class="validate" value="<%= age %>">
+					<label for="age" class="<%if(age){%>active<%}%>">Edad</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 right">
+					<button class="btn waves-effect waves-light" type="button" id="btnCancelar">Cancelar
+						<i class="material-icons left rotate">send</i>
+					</button>
+					<button class="btn waves-effect waves-light right" type="button" id="btnAceptar">Aceptar
+						<i class="material-icons right">send</i>
+					</button>
+				</div>
+			</div>
+
+		</script>
+		<!-- end templates -->
+
+		<!-- libs -->
+		<script src="lib/jquery.js"></script>
+		<script src="lib/underscore.js"></script>
+		<script src="lib/backbone.js"></script>
+		<script src="lib/backbone.localStorage.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+		<!-- end libs -->
+
+		<script src="scripts/models/consultant.js"></script>
+		<script src="scripts/collections/consultants.js"></script>
+		<script src="scripts/views/home.js"></script>
+		<script src="scripts/views/addEdit.js"></script>
+		<script src="scripts/controllers/consultant.js"></script>
+		<script src="scripts/routes/routes.js"></script>
+		<script src="scripts/app.js"></script>
+	</body>
+</html>
