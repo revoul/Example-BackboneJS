@@ -9,12 +9,12 @@ app.Routes = Backbone.Router.extend({
 		 'edit/:item' : 'edit'
 	},
 	home: function () {
-		app.Consultant_Controller.home();
+		app.Consultant_Controller.trigger('home');
 	},
 	add : function () {
-		app.Consultant_Controller.addEdit();
+		app.Consultant_Controller.trigger('add');
 	},
 	edit : function (_item) {
-		app.Consultant_Controller.addEdit(_item);
+		app.Consultant_Controller.trigger('edit', _item);
 	}
 });

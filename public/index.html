@@ -17,16 +17,10 @@
 
 		<footer></footer>
 
-
-
-
-
-
-
 		<!-- templates -->
 		<script type="html/template" id="tpl_home">
 			<div id="main-collection" class="collection">
-				<div class="valign-wrapper">
+				<!--div class="valign-wrapper">
 					<div class="preloader-wrapper big active">
 					    <div class="spinner-layer spinner-blue-only">
 					        <div class="circle-clipper left">
@@ -40,7 +34,7 @@
 					        </div>
 					    </div>
 					</div>
-				</div>
+				</div-->
 			</div>
 			<a id="add" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">add</i></a>
 		</script>
@@ -51,7 +45,7 @@
 				<a class="secondary-content waves-effect waves-light btn btn-collection hrefRemove">
 					<i class="material-icons">delete</i>
 				</a>
-				<a href="#/edit/<%= id %>" class="secondary-content waves-effect waves-light btn btn-collection hrefEdit">
+				<a class="secondary-content waves-effect waves-light btn btn-collection hrefEdit">
 					<i class="material-icons">edit</i>
 				</a>
 			</div>
@@ -104,6 +98,8 @@
 		<script src="scripts/models/consultant.js"></script>
 		<script src="scripts/collections/consultants.js"></script>
 		<script src="scripts/views/home.js"></script>
+		<script src="scripts/views/home_item.js"></script>
+		<script src="scripts/views/home_empty.js"></script>
 		<script src="scripts/views/addEdit.js"></script>
 		<script src="scripts/controllers/consultant.js"></script>
 		<script src="scripts/routes/routes.js"></script>
